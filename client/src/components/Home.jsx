@@ -16,7 +16,7 @@ function Home(){
         });
     } , []);
 
-    console.log(result);
+    console.log("on client: " + result);
 
     return (
         <div className="Home">

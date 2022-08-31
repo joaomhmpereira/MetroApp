@@ -24,12 +24,15 @@ app.get("/api/hello", (req, res) => {
 });
 
 app.get("/api/estadoServico", (req, res) => {
+    console.log("Getting estadoServico");
     //fetch waiting times for the selected line from the API
     var response = axios.get(`${base_url}/estadoLinha/todos`, { headers: { Authorization: `Bearer ${token}`}})
         .then(response => { return response.data.resposta || [] })
         .catch(error => { return error });
 
     response.then(function(result) {
+        console.log("sending: ");
+        console.log(result);
         res.status(200).send(result);
     })
 });
