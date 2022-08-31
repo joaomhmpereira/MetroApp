@@ -16,6 +16,8 @@ function Home(){
         });
     } , []);
 
+    console.log(result);
+
     return (
         <div className="Home">
             <Header />
